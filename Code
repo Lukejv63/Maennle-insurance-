@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maennle Insurance and Investments</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #333;
+      line-height: 1.5;
+    }
+    header {
+      background-color: #00539C;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    nav {
+      background-color: #e1ecf4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #00539C;
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+    }
+    section {
+      padding: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #00539C;
+      border-bottom: 2px solid #00539C;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+      font-size: 1.3rem;
+    }
+    .agents {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .agent-card {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      min-width: 200px;
+    }
+    .agent-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+    form {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    input, textarea, select, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #00539C;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003f7a;
+    }
+    footer {
+      background-color: #00539C;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      height: 250px;
+      border-radius: 10px;
+    }
+    .office-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .office-images img {
+      flex: 1 1 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      height: auto;
+    }
+    @media (min-width: 600px) {
+      .office-images img {
+        flex: 1 1 calc(33% - 0.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Maennle Insurance and Investments</h1>
+    <p>Your trusted partner in protection and growth</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#agents">Agents</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Maennle Insurance and Investments, we believe in building lasting relationships with our clients by providing personal, friendly service. Whether you need help protecting your family, planning your retirement, or growing your financial future, our experienced agents are here to guide you every step of the way.</p>
+    <div class="office-images">
+      <img src="images/office1.jpg" alt="Office Image 1">
+      <img src="images/office2.jpg" alt="Office Image 2">
+      <img src="images/office3.jpg" alt="Office Image 3">
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Auto, Home, and Life Insurance:</strong> Comprehensive coverage with personal care.</li>
+      <li><strong>Business Insurance:</strong> Protecting your company’s assets and employees.</li>
+      <li><strong>Investments:</strong> Personalized financial strategies for long-term growth.</li>
+      <li><strong>Retirement Planning:</strong> Secure your future with smart investment choices.</li>
+    </ul>
+  </section>
+
+  <section id="agents">
+    <h2>Meet Our Agents</h2>
+    <div class="agents">
+      <div class="agent-card">
+        <img src="images/luke.jpg" alt="Luke Virtanen">
+        <h3>Luke Virtanen</h3>
+        <p>Insurance & Investment Specialist</p>
+        <p>Email: <a href="mailto:lttlabs1@gmail.com">lttlabs1@gmail.com</a></p>
+        <p>Phone: (828) 835-0738</p>
+        <h4>Request a Quote:</h4>
+        <form action="https://formspree.io/f/mvgvjnjn" method="POST" onsubmit="return showThankYou()">
+          <input type="hidden" name="_subject" value="New Quote Request for Luke Virtanen">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <select name="service" required>
+            <option value="">Select a Service</option>
+            <option>Auto Insurance</option>
+            <option>Home Insurance</option>
+            <option>Life Insurance</option>
+            <option>Investments</option>
+          </select>
+          <textarea name="message" rows="4" placeholder="Tell us more about your needs..."></textarea>
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+
+      <div class="agent-card">
+        <img src="images/michael_maennle.jpg" alt="Michael Maennle">
+        <h3>Michael Maennle</h3>
+        <p>Insurance & Investment Specialist</p>
+        <p>Phone: (828) 321-4000</p>
+        <p>Online quote requests are unavailable for this agent.</p>
+      </div>
+
+      <div class="agent-card">
+        <img src="images/michael_pain.jpg" alt="Michael Pain">
+        <h3>Michael Pain</h3>
+        <p>Insurance & Investment Specialist</p>
+        <p>Phone: (828) 321-4000</p>
+        <p>Online quote requests are unavailable for this agent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Stop by our office or send us a message anytime. We’re here to help!</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509373!2d144.9537353158446!3d-37.8172097420217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5778a9e2d6f41e1!2sInsurance%20Agency!5e0!3m2!1sen!2sus!4v1234567890"></iframe>
+    <form action="https://formspree.io/f/mvgvjnjn" method="POST" onsubmit="return showThankYou()">
+      <input type="hidden" name="_subject" value="General Contact Message">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Maennle Insurance and Investments. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showThankYou() {
+      alert('Thank you! Your message has been sent successfully.');
+      return true;
+    }
+  </script>
+</body>
+</html>
